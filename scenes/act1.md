@@ -6,9 +6,9 @@ SceneSetup.act1();
 
 (...300)
 
-n: AND THIS IS THE HUMAN'S ANXIETY
+n: و این اضطراب اون آدمه
 
-n: _YOU_ ARE THE ANXIETY
+n: تو در نقش _اضطراب_ بازی می‌کنی
 
 {{if window.localStorage.continueChapter=="replay"}}
 (#act1_replay)
@@ -24,17 +24,17 @@ n: _YOU_ ARE THE ANXIETY
 
 `hong({mouth:"0_neutral", eyes:"0_neutral"})`
 
-h: Oh hey! We're back here again?
+h: باز که برگشتیم اینجا
 
 `hong({eyes:"0_neutral"})`
 
-n: YOUR JOB IS TO PROTECT YOUR HUMAN FROM *DANGER*
+n: وظیفه‌ی تو اینه که صاحبت رو از *خطر* محافظت کنی
 
 `bb({eyes:"look", mouth:"small_lock"})`
 
-n: IN FACT, REPLAYING THIS GAME IS PUTTING THEM IN *DANGER* RIGHT NOW
+n: ولی دوباره بازی کردن این بازی اونا رو تو *خطر* می‌ندازه
 
-n: QUICK, WARN THEM!
+n: سریع بهشون هشدار بده!
 
 ```
 sfx("squeak");
@@ -42,13 +42,13 @@ bb({body:"squeeze_talk"});
 hong({body:"0_squeeze"});
 ```
 
-b: Human! Listen, we're in danger! The player...
+b: گوش کن انسان، ما تو خطریم! بازیکن...
 
-[...is gonna torture us again!](#act1_replay_torture)
+[...قراره دوباره ما رو اذیت کنه!](#act1_replay_torture)
 
-[...won't find an alternate ending!](#act1_replay_alternate)
+[...نمی‌تونه یه پایان متفاوت بازی رو پیدا کنه!](#act1_replay_alternate)
 
-[...will get ludonarrative dissonance!](#act1_replay_dissonance)
+[...می‌خواد از روند بازی سرپیچی کنه!](#act1_replay_dissonance)
 
 # act1_replay_torture
 
@@ -59,27 +59,29 @@ hong({body:"0_sammich"});
 ```
 
 {{if window.HACK_REPLAY.act1_ending=="fight"}}
-b: They'll make us curl up into a ball and cry!
+b: اونا کاری می‌کنن ما مچاله شیم و گریه کنیم!
 {{/if}}
 
 {{if window.HACK_REPLAY.act1_ending=="flight"}}
 b: They'll make us kill your phone for giving you a panic attack!
+اونا مجبورمون می‌کنن به خاطر این که تو رو دچار وحشت‌زدگی کردیم گوشیت رو بشکنیم!
 {{/if}}
 
 {{if window.HACK_REPLAY.a2_ending=="fight"}}
-b: They'll make us *NOT* punch the party host!
+b: اونا یه کاری می‌کنن که یه مشت تو شکم میزبان *نزنیم*!
 {{/if}}
 
 {{if window.HACK_REPLAY.a2_ending=="flight"}}
 b: They'll make us punch the Sympathetic Anti-Villain party host!
+اونا مجبورمون می‌کنن میزبان 
 {{/if}}
 
 {{if window.HACK_REPLAY.a3_ending=="jump"}}
-h: Well at least we might not jump off the roof this ti--
+h: شاید این دفعه از پشت بوم نپریم پاییـ...
 {{/if}}
 
 {{if window.HACK_REPLAY.a3_ending=="walkaway"}}
-b: THEY'LL MAKE US JUMP OFF THE ROOF.
+b: یه کاری می‌کنن از پشت بوم بپریم پایین.
 {{/if}}
 
 `bb({body:"fear"});`
@@ -186,17 +188,17 @@ bb({body:"squeeze"});
 
 `hong({mouth:"0_neutral", eyes:"0_annoyed"})`
 
-h: Oh good, my wolf's back. Faaaaantastic.
+h: چه خوب، گرگم برگشته. چه عــــالـــی.
 
 `hong({eyes:"0_neutral"})`
 
-n: YOUR JOB IS TO PROTECT YOUR HUMAN FROM *DANGER*
+n: وظیفه‌ی تو اینه که آدمت رو از *خطر* محافظت کنی
 
 `bb({eyes:"look", mouth:"small_lock"})`
 
-n: IN FACT, THAT SANDWICH IS PUTTING THEM IN *DANGER* RIGHT NOW
+n: مثلاً همین الان این ساندویچ داره اونا رو به *خطر* می‌ندازه
 
-n: QUICK, WARN THEM!
+n: زود باش، بهش هشدار بده!
 
 ```
 sfx("squeak");
@@ -206,19 +208,23 @@ hong({body:"0_squeeze"});
 
 b: Human! Listen, we're in danger! The danger is...
 
+ببین! ما تو خطریم، خطر اینه که...
+
 `bb({body:"squeeze"})`
 
 n4: (LET _YOUR_ ANXIETY COME OUT TO PLAY! PICK WHAT'S MOST SIMILAR TO WHAT _YOUR_ FEAR TELLS YOU)
+
+(بذار اضطراب _خودت_ بازی کنه! اون چیزی که اضطراب _توـ می‌گه رو انتخاب کن)
 
 (#act1_normal_choice)
 
 # act1_normal_choice
 
-[We're eating alone for lunch! Again!](#act1a_alone) `bb({body:"squeeze_talk"})`
+[دوباره داریم تنها ناهار می‌خوریم.](#act1a_alone) `bb({body:"squeeze_talk"})`
 
-[We're not productive while eating!](#act1a_productive) `bb({body:"squeeze_talk"})`
+[موقع ناهار خوردن وقت‌مون داره تلف می‌شه.](#act1a_productive) `bb({body:"squeeze_talk"})`
 
-[That white bread's bad for us!](#act1a_bread) `bb({body:"squeeze_talk"})`
+[نون با آردِ سفید واسه سلامتی‌مون ضرر داره.](#act1a_bread) `bb({body:"squeeze_talk"})`
 
 # act1a_alone
 
@@ -227,7 +233,7 @@ bb({body:"normal", mouth:"small", eyes:"narrow"});
 hong({body:"0_sammich"});
 ```
 
-b: Don't you know loneliness is associated with premature death as much as smoking 15 cigarettes a day?-
+b: یعنی نمی‌دونی که تنهایی به اندازه‌ی کشیدن روزی ۱۵ نخ سیگار خطر مرگ زودرس رو زیاد می‌کنه؟-
 
 `Game.OVERRIDE_TEXT_SPEED = 2;`
 
@@ -237,13 +243,14 @@ b: (Holt-Lunstad 2010, PLoS Medicine)
 
 `hong({eyes:"0_annoyed"})`
 
-h: Um, thanks for citing your sources but--
+h: ممنون که به منابع رفرنس می‌دی ولی--
 
 `Game.OVERRIDE_TEXT_SPEED = 2;`
 
 `bb({body:"fear", mouth:"normal", eyes:"fear"})`
 
 b: Which means if we don't hang out with someone *right now* we're gonna-
+و این معنیش اینه که اگه *همین الان* با یکی معاشرت نکنیم-
 
 `bb({body:"panic"})`
 
@@ -326,7 +333,7 @@ b: Processed wheat will spike our blood sugar so they'll have to amputate all ou
 
 `bb({body:"panic"})`
 
-b: DIEEEEEEEEEEEEEEEEEEE
+b: مــی‌مــیـــریـــم
 
 ```
 bb({body:"normal", mouth:"normal", eyes:"normal"});
@@ -339,27 +346,27 @@ publish("hp_show");
 
 `_.whitebread = true`
 
-n: YOU USED *FEAR OF BEING HARMED*
+n: تو از *خطر آسیب دیدن» استفاده کردی
 
 (#act1b)
 
 # act1b
 
-n: IT'S SUPER EFFECTIVE
+n: که خیلی دلیل کارایی‌ه
 
 `bb({mouth:"smile", eyes:"smile"});`
 
-b: See, human? I am your loyal guard-wolf!
+b: می‌بینی آدم؟ من گرگ محافظ توام!
 
 `bb({body:"pride_talk"});`
 
-b: Trust your gut! Your feelings are always valid!
+b: به حس ششم‌ت اعتماد کن، اون همیشه درست می‌گه.
 
 `bb({body:"pride"});`
 
-n: GET YOUR HUMAN'S ENERGY BAR TO ZERO
+n: انرژی آدمت رو تمون کن
 
-n: TO PROTECT THEIR PHYSICAL + SOCIAL + MORAL NEEDS, YOU CAN USE:
+n: برای این که اونا رو از خطرهای جسمانی، اجتماعی و اخلاقی محافظت کنی می‌تونی از این‌ها استفاده کنی:
 
 n: FEAR OF *BEING HARMED* #harm#
 
